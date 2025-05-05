@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--CSS-->
+
+    <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <nav class="nav container padd-15">
+        <a href="#" class="nav-logo">
+          <h2>Miriam P</h2>
+        </a>
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#home" class="nav-link active-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#experience" class="nav-link">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a href="#pricing" class="nav-link">Associations</a>
+            </li>
+            <li class="nav-item">
+              <a href="#portfolio" class="nav-link">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contact</a>
+            </li>
+          </ul>
+          <div class="nav-close" id="nav-close">
+            <i class="lni lni-xmark"></i>
+          </div>
+        </div>
+        <div class="nav-btns">
+          <i
+            class="lni lni-colour-palette-3 change-theme"
+            id="theme-button"
+          ></i>
+          <div class="nav-toggle" id="nav-toggle">
+            <i class="lni lni-dashboard-square-1"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="main-content">
+      <section class="activities section" id="activities">
+        <div class="container activities-section">
+          <h2 class="section-title padd-15">
+            Participación en Proyectos de Investigación
+          </h2>
+          <div class="row">
+            <div class="activities-filter padd-15">
+              <div class="activities-filter-inner">
+                <button type="button" class="active" data-filter="all">
+                  Todos
+                </button>
+                <button type="button" data-filter="2024">2024</button>
+                <button type="button" data-filter="2021">2021</button>
+                <button type="button" data-filter="2020">2020</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="activities-item padd-15" data-category="2024">
+              <div class="activities-item-inner white-card">
+                <span class="term">2025</span>
+                <h3 class="activities-item-title">
+                  Interfaz tangible de realidad aumentada mediante mecanismos de
+                  papel.
+                </h3>
+                <p>Imelda Latapie Venegas</p>
+                <a href="#" class="more-button">PDF</a>
+              </div>
+            </div>
+            <div class="activities-item padd-15" data-category="2024">
+              <div class="activities-item-inner white-card">
+                <span class="term">2024</span>
+                <h3 class="activities-item-title">
+                  Protocolo de selección de herramientas de desarrollo para
+                  implementación de modelos de redes neuronales artificiales
+                </h3>
+                <p>Joas Jair Puga Mora</p>
+                <a href="#" class="more-button">PDF</a>
+              </div>
+            </div>
+
+            <div class="activities-item padd-15" data-category="2024">
+              <div class="activities-item-inner white-card">
+                <span class="term">2022</span>
+                <h3 class="activities-item-title">
+                  Bioinspired metaheuristics for problems in graphs and
+                  hypergraphs
+                </h3>
+                <p>Saúl Neri Ortiz - CIC-IPN</p>
+                <a href="#" class="more-button">PDF</a>
+              </div>
+            </div>
+            <div class="activities-item padd-15" data-category="2024">
+              <div class="activities-item-inner white-card">
+                <span class="term">2021</span>
+                <h3 class="activities-item-title">
+                  Association rule mining with multi-objective optimization
+                </h3>
+                <p>Imelda Latapie Venegas</p>
+                <a href="#" class="more-button">PDF</a>
+              </div>
+            </div>
+            <div class="activities-item padd-15" data-category="2024">
+              <div class="activities-item-inner white-card">
+                <span class="term">2021</span>
+                <h3 class="activities-item-title">
+                  Herramienta para la detección automática de enfermedades en el
+                  fruto de aguacate
+                </h3>
+                <p>ESCOM - IPN</p>
+                <a href="#" class="more-button">PDF</a>
+              </div>
+            </div>
+
+            <div class="activities-item padd-15" data-category="2024">
+              <div class="activities-item-inner white-card">
+                <span class="term">2020</span>
+                <h3 class="activities-item-title">
+                  Herramienta gráfica para la ejecución de procesos de
+                  optimización multiobjetivo utilizando algoritmos evolutivos.
+                </h3>
+                <p>Saúl Neri Ortiz - CIC-IPN</p>
+                <a href="#" class="more-button">PDF</a>
+              </div>
+            </div>
+          </div>
+          <a href="index.html">Regresar </a>
+        </div>
+      </section>
+    </main>
+    <div class="customize-theme">
+      <div class="card">
+        <h2>Customize view</h2>
+        <p>Manage your font size, color, and background</p>
+        <div class="font-size">
+          <h3>Font Size</h3>
+          <div>
+            <h6>Aa</h6>
+            <div class="choose-size">
+              <span class="font-size-1"></span>
+              <span class="font-size-2"></span>
+              <span class="font-size-3 active"></span>
+              <span class="font-size-4"></span>
+            </div>
+            <h3>Aa</h3>
+          </div>
+        </div>
+        <div class="color">
+          <h3>Color</h3>
+          <div class="choose-color">
+            <span class="color-1"></span>
+            <span class="color-2"></span>
+            <span class="color-3 active"></span>
+            <span class="color-4"></span>
+            <span class="color-5"></span>
+          </div>
+        </div>
+        <div class="background">
+          <h3>background</h3>
+          <div class="choose-bg">
+            <div class="bg-1 active">
+              <span></span>
+              <h5 for="bg-1">Light</h5>
+            </div>
+            <div class="bg-2">
+              <span></span>
+              <h5 for="bg-2">Dim</h5>
+            </div>
+            <div class="bg-3">
+              <span></span>
+              <h5 for="bg-3">Dark</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
