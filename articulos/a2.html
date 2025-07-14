@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto Final</title>
+    <link rel="stylesheet" href="/assets/css/project.css" />
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <h3 class="section-title">
+          Conceptual DFT, machine learning and molecular docking as tools for
+          predicting LD50 toxicity of organothiophosphates
+        </h3>
+
+        <div class="project-info">
+          <p>
+            <strong>Integrantes:</strong>Uriel J. Rangel Peña, Luis A. Zárate
+            Hernández, Rosa L. Camacho Mendoza, Carlos Z. Gómez Castro,
+            Simplicio González Montiel, Miriam Pescador Rojas, Amilcar Meneses
+            Viveros and Julián Cruz Borbolla
+          </p>
+          <p><strong>Fecha:</strong> 28 Junio 2023</p>
+          <p>
+            <strong>Resumen:</strong> Several descriptors from conceptual
+            density functional theory (cDFT) and the quantum theory of atoms in
+            molecules (QTAIM) were utilized in Random Forest (RF), LASSO, Ridge,
+            Elastic Net (EN), and Support Vector Machines (SVM) methods to
+            predict the toxicity (LD50) of sixty-two organothiophosphate
+            compounds. The A-RF-G1 and A-RF-G2 models were obtained using the RF
+            method, yielding statistically significant parameters with good
+            performance, as indicated by R2 values for the training set
+            (R2Train) and R2 values for the test set (R2Test), around 0.90.
+          </p>
+          <p>
+            <strong>Link al articulo:</strong>
+            <a href="https://www.mdpi.com/2297-8747/28/1/12" target="_blank"
+              >https://doi.org/10.1007/s00894-023-05630-4</a
+            >
+          </p>
+
+          <div class="tags">
+            <a href="ruta-del-pdf.pdf" class="tag" target="_blank">PDF</a>
+            <span class="tag" onclick="mostrarModal()">Cita</span>
+          </div>
+
+          <!-- Modal para la cita -->
+          <div id="modalCita" class="modal">
+            <div class="modal-content">
+              <span class="cerrar" onclick="cerrarModal()">&times;</span>
+              <p id="textoCita">
+                Rangel-Peña, U.J., Zárate-Hernández, L.A., Camacho-Mendoza, R.L.
+                et al. Conceptual DFT, machine learning and molecular docking as
+                tools for predicting LD50 toxicity of organothiophosphates. J
+                Mol Model 29, 217 (2023).
+                https://doi.org/10.1007/s00894-023-05630-4
+              </p>
+              <button onclick="copiarCita()">Copiar cita</button>
+            </div>
+          </div>
+          <br />
+          <h3>Código destacado:</h3>
+          <div class="code-block">
+            <pre><code>model = tf.keras.Sequential([
+  layers.Conv2D(32, (3,3), activation='relu', input_shape=(128,128,3)),
+  layers.MaxPooling2D(2,2),
+  layers.Flatten(),
+  layers.Dense(128, activation='relu'),
+  layers.Dense(3, activation='softmax')
+])</code></pre>
+          </div>
+          <br />
+          <h3>Elementos importantes:</h3>
+          <ul>
+            <li>Descriptores moleculares</li>
+            <li>Toxicidad (LD50)</li>
+            <li>Random Forest (RF)</li>
+            <li>cDFT (Conceptual Density Functional Theory)</li>
+            <li>QTAIM (Quantum Theory of Atoms in Molecules)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <script>
+      function mostrarModal() {
+        document.getElementById("modalCita").style.display = "block";
+      }
+
+      function cerrarModal() {
+        document.getElementById("modalCita").style.display = "none";
+      }
+
+      function copiarCita() {
+        const cita = document.getElementById("textoCita").innerText;
+        navigator.clipboard.writeText(cita).then(() => {
+          alert("Cita copiada al portapapeles");
+        });
+      }
+
+      // Cerrar si se hace clic fuera del modal
+      window.onclick = function (e) {
+        const modal = document.getElementById("modalCita");
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>

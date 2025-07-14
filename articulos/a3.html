@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto Final</title>
+    <link rel="stylesheet" href="/assets/css/project.css" />
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <h3 class="section-title">
+          QSTR Modeling to Find Relevant DFT Descriptors Related to the Toxicity
+          of Carbamates
+        </h3>
+
+        <div class="project-info">
+          <p>
+            <strong>Integrantes:</strong> Emma H. Acosta-Jiménez, Luis A.
+            Zárate-Hernández, Rosa L. Camacho-Mendoza, Simplicio
+            González-Montiel, José G. Alvarado-Rodríguez, Carlos Z.
+            Gómez-Castro, Miriam Pescador-Rojas, Amilcar Meneses-Viveros and
+            Julián Cruz-Borbolla
+          </p>
+          <p><strong>Fecha:</strong> 28 Agosto 2022</p>
+          <p>
+            <strong>Resumen:</strong> Compounds containing carbamate moieties
+            and their derivatives can generate serious public health threats and
+            environmental problems due their high potential toxicity. In this
+            study, a quantitative structure–toxicity relationship (QSTR) model
+            has been developed by using one hundred seventy-eight carbamate
+            derivatives whose toxicities in rats (oral administration) have been
+            evaluated. The QSRT model was rigorously validated by using either
+            tested or untested compounds falling within the applicability domain
+            of the model. A structure-based evaluation by docking from a series
+            of carbamates with acetylcholinesterase (AChE) was carried out. The
+            toxicity of carbamates was predicted using physicochemical,
+            structural, and quantum molecular descriptors employing a DFT
+            approach. A statistical treatment was developed; the QSRT model
+            showed a determination coefficient (R2) and a leave-one-out
+            coefficient (Q2LOO) of 0.6584 and 0.6289, respectively.
+          </p>
+          <p>
+            <strong>Link al articulo:</strong>
+            <a href="https://doi.org/10.3390/molecules27175530" target="_blank"
+              >https://doi.org/10.3390/molecules27175530</a
+            >
+          </p>
+
+          <div class="tags">
+            <a href="ruta-del-pdf.pdf" class="tag" target="_blank">PDF</a>
+            <span class="tag" onclick="mostrarModal()">Cita</span>
+          </div>
+
+          <!-- Modal para la cita -->
+          <div id="modalCita" class="modal">
+            <div class="modal-content">
+              <span class="cerrar" onclick="cerrarModal()">&times;</span>
+              <p id="textoCita">
+                Acosta-Jiménez, E. H., Zárate-Hernández, L. A., Camacho-Mendoza,
+                R. L., González-Montiel, S., Alvarado-Rodríguez, J. G.,
+                Gómez-Castro, C. Z., Pescador-Rojas, M., Meneses-Viveros, A., &
+                Cruz-Borbolla, J. (2022). QSTR Modeling to Find Relevant DFT
+                Descriptors Related to the Toxicity of Carbamates. Molecules,
+                27(17), 5530. https://doi.org/10.3390/molecules27175530
+              </p>
+              <button onclick="copiarCita()">Copiar cita</button>
+            </div>
+          </div>
+          <br />
+          <h3>Código destacado:</h3>
+          <div class="code-block">
+            <pre><code>model = tf.keras.Sequential([
+  layers.Conv2D(32, (3,3), activation='relu', input_shape=(128,128,3)),
+  layers.MaxPooling2D(2,2),
+  layers.Flatten(),
+  layers.Dense(128, activation='relu'),
+  layers.Dense(3, activation='softmax')
+])</code></pre>
+          </div>
+          <br />
+          <h3>Elementos importantes:</h3>
+          <ul>
+            <li>QSTR</li>
+            <li>Toxicity</li>
+            <li>Carbamates</li>
+            <li>DFT</li>
+            <li>Acetylcholinesterase</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <script>
+      function mostrarModal() {
+        document.getElementById("modalCita").style.display = "block";
+      }
+
+      function cerrarModal() {
+        document.getElementById("modalCita").style.display = "none";
+      }
+
+      function copiarCita() {
+        const cita = document.getElementById("textoCita").innerText;
+        navigator.clipboard.writeText(cita).then(() => {
+          alert("Cita copiada al portapapeles");
+        });
+      }
+
+      // Cerrar si se hace clic fuera del modal
+      window.onclick = function (e) {
+        const modal = document.getElementById("modalCita");
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto Final</title>
+    <link rel="stylesheet" href="/assets/css/project.css" />
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <h3 class="section-title">
+          COVID-19 Data Analysis with a Multi-Objective Evolutionary Algorithm
+          for Causal Association Rule Mining
+        </h3>
+
+        <div class="project-info">
+          <p>
+            <strong>Integrantes:</strong> Santiago Sinisterra Sierra, Salvador
+            Godoy Calderón and Miriam Pescador Rojas Martínez
+          </p>
+          <p><strong>Fecha:</strong> 13 Julio 2023</p>
+          <p>
+            <strong>Resumen:</strong> Association rule mining plays a crucial
+            role in the medical area in discovering interesting relationships
+            among the attributes of a data set. Traditional association rule
+            mining algorithms such as Apriori, FP growth, or Eclat require
+            considerable computational resources and generate large volumes of
+            rules. Moreover, these techniques depend on user-defined thresholds
+            which can inadvertently cause the algorithm to omit some interesting
+            rules. In order to solve such challenges, we propose an evolutionary
+            multi-objective algorithm based on NSGA-II to guide the mining
+            process in a data set composed of 15.5 million records with official
+            data describing the COVID-19 pandemic in Mexico. We tested different
+            scenarios optimizing classical and causal estimation measures in
+            four waves, defined as the periods of time where the number of
+            people with COVID-19 increased. The proposed contributions generate,
+            recombine, and evaluate patterns, focusing on recovering promising
+            high-quality rules with actionable cause–effect relationships among
+            the attributes to identify which groups are more susceptible to
+            disease or what combinations of conditions are necessary to receive
+            certain types of medical care.
+          </p>
+          <p>
+            <strong>Link al articulo:</strong>
+            <a href="https://www.mdpi.com/2297-8747/28/1/12" target="_blank"
+              >https://doi.org/10.3390/mca28010012</a
+            >
+          </p>
+
+          <div class="tags">
+            <a href="ruta-del-pdf.pdf" class="tag" target="_blank">PDF</a>
+            <span class="tag" onclick="mostrarModal()">Cita</span>
+          </div>
+
+          <!-- Modal para la cita -->
+          <div id="modalCita" class="modal">
+            <div class="modal-content">
+              <span class="cerrar" onclick="cerrarModal()">&times;</span>
+              <p id="textoCita">
+                Sinisterra-Sierra, S., Godoy-Calderón, S., & Pescador-Rojas, M.
+                (2023). COVID-19 Data Analysis with a Multi-Objective
+                Evolutionary Algorithm for Causal Association Rule Mining.
+                Mathematical and Computational Applications, 28(1), 12.
+                https://doi.org/10.3390/mca28010012
+              </p>
+              <button onclick="copiarCita()">Copiar cita</button>
+            </div>
+          </div>
+          <br />
+          <h3>Código destacado:</h3>
+          <div class="code-block">
+            <pre><code>model = tf.keras.Sequential([
+  layers.Conv2D(32, (3,3), activation='relu', input_shape=(128,128,3)),
+  layers.MaxPooling2D(2,2),
+  layers.Flatten(),
+  layers.Dense(128, activation='relu'),
+  layers.Dense(3, activation='softmax')
+])</code></pre>
+          </div>
+          <br />
+          <h3>Elementos importantes:</h3>
+          <ul>
+            <li>association rule mining</li>
+            <li>causality measures</li>
+            <li>multi-objective evolutionary algorithm</li>
+            <li>COVID-19 data</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <script>
+      function mostrarModal() {
+        document.getElementById("modalCita").style.display = "block";
+      }
+
+      function cerrarModal() {
+        document.getElementById("modalCita").style.display = "none";
+      }
+
+      function copiarCita() {
+        const cita = document.getElementById("textoCita").innerText;
+        navigator.clipboard.writeText(cita).then(() => {
+          alert("Cita copiada al portapapeles");
+        });
+      }
+
+      // Cerrar si se hace clic fuera del modal
+      window.onclick = function (e) {
+        const modal = document.getElementById("modalCita");
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>

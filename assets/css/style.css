@@ -381,6 +381,14 @@ h3 {
 }
 .service-item p {
   color: #fff;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+.service-item-inner:hover p {
+  opacity: 1;
+  max-height: 200px; /* puedes ajustar este valor si el texto es muy largo */
 }
 
 .education {
@@ -438,15 +446,38 @@ h3 {
   margin: var(--m-0-75);
 }*/
 
+/*Experience pruebas*/
+.row-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 280px; /* Opcional: separa los títulos */
+}
+
+.section-title .exp {
+  text-align: left; /* O left/right según desees */
+}
+
 /*pricin*/
 .prices {
   flex: 0 0 33.33%;
   max-width: 33.33%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 450px; /* altura fija */
+  box-sizing: border-box;
+
+  overflow: hidden; /* para evitar que el contenido desborde */
 }
-.prices:nth-child(odd) {
-  margin-top: 1.5rem;
-}
+
 .prices:nth-child(1) {
+  padding-left: 15px;
+}
+.prices:nth-child(2) {
+  padding-right: 15px;
   padding-left: 15px;
 }
 .prices:nth-child(3) {
@@ -722,8 +753,16 @@ h3 {
 }
 
 .contact-box {
-  flex: 0 0 40%;
-  max-width: 40%;
+  flex: 0 0 30%;
+  max-width: 30%;
+  box-sizing: border-box;
+  padding-top: 25px;
+}
+
+.map-container {
+  flex: 0 0 70%;
+  max-width: 70%;
+  box-sizing: border-box;
 }
 .contact-form {
   flex: 0 0 60%;
@@ -751,9 +790,9 @@ h3 {
 }
 
 .contact-content {
-  position: relative;
-  height: 3rem;
-  border-bottom: 2px solid var(--color-gray);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 .contact-content span {
   position: absolute;
@@ -798,6 +837,18 @@ h3 {
   left: 0;
   z-index: 10;
   color: var(--color-primary);
+}
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  border: none;
+}
+.contact section .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
 }
 
 .footer {
